@@ -219,16 +219,24 @@ nav .fa {
 }
 
 .container {
-    margin: 10px;
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 2em;
-    width: 1000px;
+    width: 55%;
     height: 600px;
     transition: all 400ms;
     text-align: center;
     justify-content: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 3fr 3fr 3fr 3fr 3fr;  
+        width: 80%;
+        text-align: center;
+    }
 }
 
 .box {
@@ -268,7 +276,7 @@ nav .fa {
 }
 
 .container:has(.box-1) {
-    margin-left: 8.2%;
+    margin-left: 8%;
 }
 
 .container .box:hover {
